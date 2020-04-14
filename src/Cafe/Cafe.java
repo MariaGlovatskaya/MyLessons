@@ -54,4 +54,4 @@ Info("Money paid: " + iPay + "Money left: " + myMoney);
 
 }
 //грокаем Алгоритмы
-//comment
+//comme
