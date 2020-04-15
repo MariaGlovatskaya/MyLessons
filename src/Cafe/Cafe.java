@@ -2,7 +2,7 @@ package Cafe;
 
 import java.util.Scanner;
 
-public class Cafe {
+public class Cafe extends Cafes implements Restaurants{
     private String[][] menu = {{"Espresso", "Latte", "Capuchino"}, {"Tosts", "Omelette", "Cheesecakes"}};
     private double[][] prise = {{2.50, 3.10, 4.20}, {3.40, 4.10, 5.00}};
     private double myMoney = 15.70;
@@ -20,7 +20,8 @@ public class Cafe {
         }
     }
 
-    protected void takeOrder() {
+    @Override
+    public void takeOrder() {
         Info("Are you ready to make an order?");
         Scanner scanner = new Scanner(System.in);
         String answer = scanner.next();
@@ -47,6 +48,7 @@ private String isItemInMenu(String item){
     return "";
 }
 
+@Override
 protected void pay(){
     myMoney = myMoney - iPay;
 Info("Money paid: " + iPay + "Money left: " + myMoney);
