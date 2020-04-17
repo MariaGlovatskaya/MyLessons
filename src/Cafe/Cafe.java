@@ -1,6 +1,7 @@
 package Cafe;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -28,6 +29,8 @@ public class Cafe extends Cafes implements Restaurants{
 
     public Cafe() {
         System.out.println("Good morning. Please see our menu:");
+        Collections.reverse(menu);
+        Collections.reverse(price);
         for (String item:menu) {
            Double pr = price.get(menu.indexOf(item));
                 System.out.println(item + " Price " + pr.toString());
